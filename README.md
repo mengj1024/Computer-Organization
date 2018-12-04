@@ -16,19 +16,19 @@ From logic gates to MIPS micro system.
 - require basic knowledge about data structure.
 
 ## Project 3
-- single-cycle MIPS 32-bit CPU in Logisim.
+- 32-bit single-cycle MIPS CPU in Logisim.
 - support instruction set {`addu`, `subu`, `ori`, `lw`, `sw`, `beq`, `lui`, `nop`}.
   
 ## Project 4
-- single-cycle MIPS 32-bit CPU in Verilog.
+- 32-bit single-cycle MIPS CPU in Verilog.
 - support instruction set {`addu`, `subu`, `ori`, `lw`, `sw`, `beq`, `lui`, `j`, `jal`, `jr`, `nop`}.
 
 ## Project 5
-- 5-stage pipeline MIPS 32-bit CPU in Verilog.
+- 32-bit 5-stage pipeline MIPS CPU in Verilog.
 - support instruction set {`addu`, `subu`, `ori`, `lw`, `sw`, `beq`, `lui`, `j`, `jal`, `jr`, `nop`}.
 
 ## Project 6
-- 5-stage pipeline MIPS 32-bit CPU based on Project 5 in Verilog.
+- 32-bit 5-stage pipeline MIPS CPU based on Project 5 in Verilog.
 - support MIPS-C3 = {`LB`, `LBU`, `LH`, `LHU`, `LW`, `SB`, `SH`, `SW`, `ADD`, `ADDU`, `SUB`, `SUBU`, `MULT`, `MULTU`, `DIV`, `DIVU`, `SLL`, `SRL`, `SRA`, `SLLV`, `SRLV`, `SRAV`, `AND`, `OR`, `XOR`, `NOR`, `ADDI`, `ADDIU`, `ANDI`, `ORI`, `XORI`, `LUI`, `SLT`, `SLTI`, `SLTIU`, `SLTU`, `BEQ`, `BNE`, `BLEZ`, `BGTZ`, `BLTZ`, `BGEZ`, `J`, `JAL`, `JALR`, `JR`, `MFHI`, `MFLO`, `MTHI`, `MTLO`}.
 
 ## Project 7
