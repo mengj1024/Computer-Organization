@@ -9,7 +9,7 @@
 **Format:** `blezalr rd, rs, rt`
 
 **Operation:**
-```c
+```erl
 I:
 condi <- GPR[rs] <= 0
 GPR[rd] <- PC + 8
@@ -29,7 +29,7 @@ endif
 **Format:** `rotr rd, rt, sa`
 
 **Operation:**
-```c
+```erl
 GPR[rd] <- GPR[rt][sa-1:0] || GPR[rt][31:sa]
 ```
 
@@ -42,7 +42,7 @@ GPR[rd] <- GPR[rt][sa-1:0] || GPR[rt][31:sa]
 **Format:** `lhs rt, offset(base)`
 
 **Operation:**
-```c
+```erl
 addr <- GPR[base] + sign_extend(offset)
 NewAddr <- {addr[31:2], 00}
 Memword <- Memory[NewAddr]
