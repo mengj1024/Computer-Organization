@@ -38,7 +38,9 @@
 
 | opcode | rs | 000000 | offset | 
 | :-: | :-: | :-: | :-: |
+
 **Format:** `bptal rs, offset`
+
 **Operation:**
 
 ## rotrv
