@@ -1,6 +1,15 @@
 # Computer-Organization
 From logic gates to MIPS micro system.
+## Problems
+This repo include most of the on-class and off-class test problems recorded.
 
+On-class test on every Thursday, 1 pre-exam and 9 Projects in total.
+
+If you want to contribute to this repo, please follow the rules below:
+- **You should not just provide source code**.
+- Better if more comment about what you thought when you were dealing with that problem.
+
+Here's a outline of each project.
 ## Project 0
 - ALU
 - CRC check digit
