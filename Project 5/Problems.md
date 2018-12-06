@@ -6,21 +6,27 @@
 | opcode | rs | rt | rd | - | funct | 
 | :-: | :-: | :-: | :-: | :-: | :-: |
 
-### **Format:** `blezalr rd, rs, rt`
-### **Operation:**
+**Format:** `blezalr rd, rs, rt`
+
+**Operation:**
 
 ## rotr
 (Rotate Word Right)
 
 | opcode | rs | rt | - | sa | funct | 
 | :-: | :-: | :-: | :-: | :-: | :-: |
-### **Format:** `rotr rd, rt, sa`
-### **Operation:**
+
+**Format:** `rotr rd, rt, sa`
+
+**Operation:**
 
 ## lhs
 (Load Halfword Special)
 
 | opcode | base | rt | offset | 
 | :-: | :-: | :-: | :-: |
-### **Format:** `lhs rt, offset(base)`
-### **Operation:**
+
+**Format:** `lhs rt, offset(base)`
+
+**Operation:**
+
