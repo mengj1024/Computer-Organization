@@ -9,6 +9,10 @@
 **Format:** `bgtz rs, offset`
 
 **Operation:**
+```erl
+if (GPR[rs] > 0)
+    PC = PC + 4 + sign_extend(offset||00)
+```
 
 ## srlv
 (Shift Right Logical Variable)
@@ -19,7 +23,10 @@
 **Format:** `srlv rd, rs, rt`
 
 **Operation:**
-
+```erl
+sa <- GPR[rs][4:0]
+GPR[rd] = {sa{0}, GPR[rt][31:sa]}
+```
 
 ## lbu
 (Load Byte Unsigned)
@@ -30,3 +37,7 @@
 **Format:** `lbu rt, offset(base)`
 
 **Operation:**
+```erl
+addr <- GPR[base] + sign_extend(offset)
+GPR[rt] = {24{0}, Memory[addr][7:0]}
+```
