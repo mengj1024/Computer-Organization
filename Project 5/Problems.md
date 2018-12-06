@@ -44,7 +44,7 @@ GPR[rd] <- GPR[rt][sa-1:0] || GPR[rt][31:sa]
 **Operation:**
 ```erl
 addr <- GPR[base] + sign_extend(offset)
-NewAddr <- {addr[31:2], 2'b00}
+NewAddr <- {addr[31:2], 00}
 Memword <- Memory[NewAddr]
 if (addr[1:0] == 2)
     GPR[rt] <- sign_ext(Memword[15:0])
