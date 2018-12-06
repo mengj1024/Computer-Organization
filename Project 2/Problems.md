@@ -20,6 +20,6 @@
 
 ## substring replacement
 
-## Matrix to the Power of $ 2^n $
+## Matrix to the Power of 2^n
 
 ## Expression Calculator (Data Structure Homework)
