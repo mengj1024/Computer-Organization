@@ -73,7 +73,7 @@ else
 | opcode | rs | rt | rd | - | funct | 
 | :-: | :-: | :-: | :-: | :-: | :-: |
 
-**Format:** `rotr rd, rt, rd`
+**Format:** `rotr rd, rt, rs`
 
 **Operation:**
 ```erl
