@@ -20,7 +20,7 @@
 ## lhs
 (Load Halfword Special)
 
-| opcode | base | rt | - | - | funct | 
-| :-: | :-: | :-: | :-: | :-: | :-: |
+| opcode | base | rt | offset | 
+| :-: | :-: | :-: | :-: |
 ### **Format:** `lhs rt, offset(base)`
 ### **Operation:**
