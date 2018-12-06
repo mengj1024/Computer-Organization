@@ -5,8 +5,10 @@
 
 | opcode | rs | 000000 | offset | 
 | :-: | :-: | :-: | :-: |
-### **Format:** `bnez rs, offset`
-### **Operation:**
+
+**Format:** `bnez rs, offset`
+
+**Operation:**
 
 ## msbv
 (Move special byte variable ?)
@@ -14,16 +16,20 @@
 | opcode | rs | rt | rd | - | funct | 
 | :-: | :-: | :-: | :-: | :-: | :-: |
 
-### **Format:** `msbv rd, rs, rt`
-### **Operation:**
+**Format:** `msbv rd, rs, rt`
+
+**Operation:**
 
 ## lbu
 (Load Byte Unsigned)
 
 | opcode | base | rt | offset | 
 | :-: | :-: | :-: | :-: |
-### **Format:** `lbu rt, offset(base)`
-### **Operation:**
+
+**Format:** `lbu rt, offset(base)`
+
+**Operation:**
+
 
 # 2018.11.29
 
@@ -32,21 +38,27 @@
 
 | opcode | rs | 000000 | offset | 
 | :-: | :-: | :-: | :-: |
-### **Format:** `bptal rs, offset`
-### **Operation:**
+**Format:** `bptal rs, offset`
+**Operation:**
 
 ## rotrv
 (Rotate Word Right Variable)
 
 | opcode | rs | rt | rd | - | funct | 
 | :-: | :-: | :-: | :-: | :-: | :-: |
-### **Format:** `rotr rd, rt, rd`
-### **Operation:**
+
+**Format:** `rotr rd, rt, rd`
+
+**Operation:**
+
 
 ## shs
 (Store Halfword Special)
 
 | opcode | base | rt | offset | 
 | :-: | :-: | :-: | :-: |
-### **Format:** `shs rt, offset(base)`
-### **Operation:**
+
+**Format:** `shs rt, offset(base)`
+
+**Operation:**
+
