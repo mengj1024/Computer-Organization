@@ -17,13 +17,10 @@ to deal with the traps and interrupts
 - Of (Overflow)
   
 ### priority
-Hold exception flags in pipeline until commit point (M
-stage). Exceptions in earlier pipe stages override later exceptions for a given instruction.
-Inject external interrupts at commit point (override
-others).
-If exception at commit: update Cause and EPC
-registers, kill all stages, inject handler PC into fetch
-stage.
+Hold exception flags in pipeline until commit point (M stage). 
+Exceptions in earlier pipe stages override later exceptions for a given instruction.
+Inject external interrupts at commit point (override others).
+If exception at commit: update Cause and EPC registers, kill all stages, inject handler PC into fetch stage.
   
 #### AdEL
 - `lw`, `lh`, `lhu`: address unaligned on boundary, like `lw $t1, 2(3)`
