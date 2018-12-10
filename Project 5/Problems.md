@@ -85,6 +85,7 @@ endif
 
 ## blezals
 (Branch on Less than or Equal to Zero And Link Special)
+
 | opcode | rs | - | offset | 
 | :-: | :-: | :-: | :-: |
 
