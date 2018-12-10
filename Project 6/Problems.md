@@ -9,7 +9,7 @@
 **Format:** `blezalr rd, rs, rt`
 
 **Operation:**
-```erl
+```verilog
 I:
 condi <- GPR[rs] <= 0
 GPR[rd] <- PC + 8
@@ -36,7 +36,7 @@ endif
 **Format:** `msub rs, rt`
 
 **Operation:**
-```erl
+```verilog
 (HI,LO) <- (HI,LO) - (GPR[rs] x GPR[rt])
 ```
 #### Solution by Demard
@@ -55,7 +55,7 @@ endif
 **Format:** `lhs rt, offset(base)`
 
 **Operation:**
-```erl
+```verilog
 addr <- GPR[base] + sign_extend(offset)
 NewAddr <- {addr[31:2], 00}
 Memword <- Memory[NewAddr]

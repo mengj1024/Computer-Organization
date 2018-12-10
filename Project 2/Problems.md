@@ -35,7 +35,7 @@ for (i = 0; i + 1 < n; ++ i){
 ## substring replacement
 - read 3 strings, **str**, **str1**, **str2** ($v0 = 12 or 8 both works)
 - replace all the **str1** in **str** to **str2**
-- replace field shouldn't overlap. e.g. case like str: `ababa`, str1: `aba`, str2: `kkk`, should print `kkkba`.
+- replace field shouldn't ovverilogap. e.g. case like str: `ababa`, str1: `aba`, str2: `kkk`, should print `kkkba`.
   
 ## Matrix to the Power of 2^n
 Input a square matrix `A`, and output its power of 2^n.

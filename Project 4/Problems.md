@@ -9,7 +9,7 @@
 **Format:** `bnez rs, offset`
 
 **Operation:**
-```erl
+```verilog
 if (GPR[rs] != 0)
     PC = PC + 4 + sign_extend(offset||00)
 ```
@@ -29,7 +29,7 @@ if (GPR[rs] != 0)
 **Format:** `msbv rd, rs, rt`
 
 **Operation:**
-```erl
+```verilog
 start <- GPR[rs]4..0
 count <- GPR[rs]9..5
 if (start + count – 1 <= 31) then
@@ -49,7 +49,7 @@ GPR[rd] <- sign_ext(temp)
 **Format:** `lbu rt, offset(base)`
 
 **Operation:**
-```erl
+```verilog
 addr <- GPR[base] + sign_extend(offset)
 GPR[rt] <- {24{0}, Memory[addr][7:0]}
 ```
@@ -72,7 +72,7 @@ GPR[rt] <- {24{0}, Memory[addr][7:0]}
 **Format:** `bptal rs, offset`
 
 **Operation:**
-```erl
+```verilog
 if (GPR[rs] is power of 2)
     GPR[31] <- PC + 4
     PC <- sign_extend(offset || 00)
@@ -96,7 +96,7 @@ else
 **Format:** `rotr rd, rt, rs`
 
 **Operation:**
-```erl
+```verilog
 sa <- GPR[rs][4:0]
 GPR[rd] <- GPR[rt][sa-1:0] || GPR[rt][31:sa]
 ```
@@ -118,7 +118,7 @@ GPR[rd] <- GPR[rt][sa-1:0] || GPR[rt][31:sa]
 **Format:** `shs rt, offset(base)`
 
 **Operation:**
-```erl
+```verilog
 addr <- GPR[base] + sign_extend(offset)
 Memword0 <- Memory[addr]
 Memword1 <- Memory[addr-4] // ? I forgot it...

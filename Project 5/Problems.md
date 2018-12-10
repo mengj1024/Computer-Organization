@@ -9,7 +9,7 @@
 **Format:** `blezalr rd, rs, rt`
 
 **Operation:**
-```erl
+```verilog
 I:
 condi <- GPR[rs] <= 0
 GPR[rd] <- PC + 8
@@ -37,7 +37,7 @@ endif
 **Format:** `rotr rd, rt, sa`
 
 **Operation:**
-```erl
+```verilog
 GPR[rd] <- GPR[rt][sa-1:0] || GPR[rt][31:sa]
 ```
 
@@ -59,7 +59,7 @@ GPR[rd] <- GPR[rt][sa-1:0] || GPR[rt][31:sa]
 **Format:** `lhs rt, offset(base)`
 
 **Operation:**
-```erl
+```verilog
 addr <- GPR[base] + sign_extend(offset)
 NewAddr <- {addr[31:2], 00}
 Memword <- Memory[NewAddr]
@@ -79,3 +79,59 @@ endif
 #### Potential Bugs
   - I didn't find it. :| 
   - waiting for you to fill this one..
+
+
+# 2018.11.29
+
+## blezals
+(Branch on Less than or Equal to Zero And Link Special)
+| opcode | rs | - | offset | 
+| :-: | :-: | :-: | :-: |
+
+**Format:** `blezals rs, offset`
+
+**Operation:**
+```verilog
+I:
+condi <- GPR[rs] <= 0
+GPR[rd] <- PC + 8
+
+I+1:
+if (condi) then
+    PC <- PC + sign_extend(offset||00)
+endif
+```
+
+## rev
+(Reverse)
+
+| opcode | rs | rt | - | - | funct | 
+| :-: | :-: | :-: | :-: | :-: | :-: |
+
+**Format:** `rev rt, rs`
+
+**Operation:**
+```verilog
+GPR[rt] <- {GPR[rs][0], GPR[rs][1], ..., GPR[rs][31]}
+```
+
+#### Solution by Demard
+> perform this instruction mainly in ALU.
+> for i in [0, 31], `GPR[rt][i] = GPR[rs][31-i]`
+
+#### Potential Bugs
+  None
+
+## shs
+(Store Halfword Special)
+
+| opcode | base | rt | offset | 
+| :-: | :-: | :-: | :-: |
+
+**Format:** `shs rt, offset(base)`
+
+**Operation:**
+```verilog
+addr <- GPR[base] + sign_extend(offset)
+
+```
