@@ -14,6 +14,12 @@ if (GPR[rs] != 0)
     PC = PC + 4 + sign_extend(offset||00)
 ```
 
+#### Solution by Demard
+> No difference from `beq` other than Not Equal to Zero.
+
+#### Potential Bugs
+  None
+
 ## msbv
 (Move special byte variable ?)
 
@@ -45,8 +51,15 @@ GPR[rd] <- sign_ext(temp)
 **Operation:**
 ```erl
 addr <- GPR[base] + sign_extend(offset)
-GPR[rt] = {24{0}, Memory[addr][7:0]}
+GPR[rt] <- {24{0}, Memory[addr][7:0]}
 ```
+
+#### Solution by Demard
+> Load the word out of data memory first, then select the byte correspondingly by `addr[1:0]`
+> zero extend the byte and connect it to the Write Back MUX.
+
+#### Potential Bugs
+  None
 
 # 2018.11.29
 
@@ -67,6 +80,14 @@ else
     PC <- PC + 4
 ```
 
+#### Solution by Demard
+> To see if it's power of 2, you can mod 2, find the only one 1 bit, etc.
+> zero extend the byte and connect it to the Write Back MUX.
+
+#### Potential Bugs
+- If the condi is not true, NO link(PC + 4 shouldn't be assigned to `GPR[31]`)!
+- `GPR[rs]` is interpreted as **signed number**.
+
 ## rotrv
 (Rotate Word Right Variable)
 
@@ -80,6 +101,14 @@ else
 sa <- GPR[rs][4:0]
 GPR[rd] <- GPR[rt][sa-1:0] || GPR[rt][31:sa]
 ```
+
+#### Solution by Demard
+> {GPR[rt], GPR[rt]} >> GPR[rs][4:0]
+> Jackpot!
+> Another solution is to assign each bit to alu.res by a loop.
+
+#### Potential Bugs
+  None
 
 ## lhs
 (Load Halfword Special)
@@ -95,6 +124,7 @@ addr <- GPR[base] + sign_extend(offset)
 Memword0 <- Memory[addr]
 Memword1 <- Memory[addr-4] // ? I forgot it...
 if (addr == 3)
-
-
+    GPR[rt] <- Memword0 blabla..
+else 
+    blabla
 ```

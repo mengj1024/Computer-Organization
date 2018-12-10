@@ -19,6 +19,14 @@ if (condi) then
     PC <- GPR[rt]
 endif
 ```
+#### Solution by Demard
+> Classic mixed instruction of `blez` and `jalr`!
+> The `condi` signal is needed where PC is updated and **no where else**. So the easy way is to produce `condi` using `GPR[rs]`, and connect it to npc module or IF stage to update PC conditionally. 
+> Note that the `Tuse` of both `rs` and `rt` are **0**.
+
+#### Potential Bugs
+  - `blezalr`'s *link* part is slightly different from `bgezal`, `GPR[rd] <- PC + 8` always gets executed no matter the `condi` is asserted or not.
+
 
 ## rotr
 (Rotate Word Right)
@@ -32,6 +40,15 @@ endif
 ```erl
 GPR[rd] <- GPR[rt][sa-1:0] || GPR[rt][31:sa]
 ```
+
+#### Solution by Demard
+> {GPR[rt], GPR[rt]} >> sa
+> Jackpot!
+> Another solution is to assign each bit to alu.res by a loop.
+
+#### Potential Bugs
+  None
+
 
 ## lhs
 (Load Halfword Special)
@@ -52,3 +69,13 @@ else if (addr[1:0] == 0)
     GPR[rt] <- sign_ext(Memword[31:16])
 endif
 ```
+
+#### Solution by Demard
+> seems pretty common, read a word just like `lw`, load conditionally, and make sure the `RegWrite` is also conditional.
+> Jackpot...huh? but I didn't pass the penultimate case...wysl
+> The report message shows that I was writing the right register at the right time(PC) but the wrong value, 0xffff4371 particularly which expected 0xffffa406. I'd checked sign extension part a million times...It must have gone wrong AFTER the sign extension part, the WB stage specifically, or it didn't go sign extension part at all.
+> jeeeeeeeh, disgusting...
+
+#### Potential Bugs
+  - I didn't find it. :| 
+  - waiting for you to fill this one..
