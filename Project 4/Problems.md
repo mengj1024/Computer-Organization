@@ -82,7 +82,6 @@ else
 
 #### Solution by Demard
 > To see if it's power of 2, you can mod 2, find the only one 1 bit, etc.
-> zero extend the byte and connect it to the Write Back MUX.
 
 #### Potential Bugs
 - If the condi is not true, NO link(PC + 4 shouldn't be assigned to `GPR[31]`)!
