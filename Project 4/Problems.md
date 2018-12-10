@@ -102,8 +102,8 @@ GPR[rd] <- GPR[rt][sa-1:0] || GPR[rt][31:sa]
 ```
 
 #### Solution by Demard
-> {GPR[rt], GPR[rt]} >> GPR[rs][4:0]
 > Jackpot!
+> `{GPR[rt], GPR[rt]} >> GPR[rs][4:0]`
 > Another solution is to assign each bit to alu.res by a loop.
 
 #### Potential Bugs
