@@ -9,7 +9,7 @@
 **Format:** `bgtz rs, offset`
 
 **Operation:**
-```erl
+```verilog
 if (GPR[rs] > 0)
     PC = PC + 4 + sign_extend(offset||00)
 ```
@@ -23,7 +23,7 @@ if (GPR[rs] > 0)
 **Format:** `srlv rd, rs, rt`
 
 **Operation:**
-```erl
+```verilog
 sa <- GPR[rs][4:0]
 GPR[rd] = {sa{0}, GPR[rt][31:sa]}
 ```
@@ -37,7 +37,7 @@ GPR[rd] = {sa{0}, GPR[rt][31:sa]}
 **Format:** `lbu rt, offset(base)`
 
 **Operation:**
-```erl
+```verilog
 addr <- GPR[base] + sign_extend(offset)
 GPR[rt] = {24{0}, Memory[addr][7:0]}
 ```
