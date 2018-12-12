@@ -1,11 +1,8 @@
-CPU <--> Bridge <--> Peripherals
-
 #### CP0:
 - Status
 - Cause
 - EPC
 - PrID
-to deal with the traps and interrupts
 
 #### Interrupts: (asynchronous)
 - I/O request
@@ -14,7 +11,7 @@ to deal with the traps and interrupts
 - AdEL (Address Exception Load)
 - AdES (Address Exception Store)
 - RI (undefined instruction)
-- Of (Overflow)
+- Ov (Overflow)
   
 ### priority
 Hold exception flags in pipeline until commit point (M stage). 
@@ -33,14 +30,14 @@ If exception at commit: update Cause and EPC registers, kill all stages, inject 
 #### AdES
 - `sw`, `sh`, `sb`: address unaligned on boundary.
 - `sw`, `sh`, `sb`: cross limit(base) address.
-- Trying to write Timer.CNT register.
+- `sw`, `sh`, `sb`: Trying to write Timer.CNT register.
 - `sh`, `sb`: perform on Timer.
 - `sw`, `sh`, `sb`: arithemtic overflow at Execute stage.
 
 #### RI
 - invalid opcode or funct.
 
-#### Of
+#### Ov
 - `add`, `addi`, `sub`: arithmetic overflow in ALU.
   
 

@@ -57,7 +57,7 @@ endif
 **Operation:**
 ```verilog
 addr <- GPR[base] + sign_extend(offset)
-NewAddr <- {addr[31:2], 00}
+NewAddr <- addr[31:2] || 00
 Memword <- Memory[NewAddr]
 if (addr[1:0] == 2)
     GPR[rt] <- sign_ext(Memword[15:0])
@@ -69,5 +69,4 @@ endif
 > same as Project 5.lhs
 
 #### Potential Bugs
-  - I didn't find it. :| 
   - waiting for you to fill this one..
