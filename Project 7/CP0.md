@@ -34,6 +34,7 @@
 #### BD (Branch Delay)
 - EPC is committed to being the address to which control should return after an exception.
 - *BD* is set whenever an exception occurs on an instruction in a **delay slot** and EPC points to the branch.
+- **EPC doesn't always points to the victim!!!**
 
 #### IP (Interrupt Pending)
 - Shows you the interrupts that want to happen.

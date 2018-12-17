@@ -23,8 +23,7 @@ If exception at commit: update Cause and EPC registers, kill all stages, inject 
 - `lw`, `lh`, `lhu`: address unaligned on boundary, like `lw $t1, 2(3)`
 - `lw`, `lh`, `lhu`, `lb`, `lbu`: cross limit(base) address, like `lh $t2, 2(0x3000)`.
 - `lh`, `lhu`, `lb`, `lbu`: perform on Timer.
-- PC isn't aligned on word boundary.
-- PC isn't in [0x3000, 0x4ffc].
+- `jr`, `jalr`: PC isn't aligned on word boundary or in [0x3000, 0x4ffc].
 - `lw`, `lh`, `lhu`, `lb`, `lbu`: arithemtic overflow at Execute stage.
 
 #### AdES
@@ -35,7 +34,7 @@ If exception at commit: update Cause and EPC registers, kill all stages, inject 
 - `sw`, `sh`, `sb`: arithemtic overflow at Execute stage.
 
 #### RI
-- invalid opcode or funct.
+- `xxx`: invalid opcode or funct.
 
 #### Ov
 - `add`, `addi`, `sub`: arithmetic overflow in ALU.
