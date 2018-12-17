@@ -51,3 +51,17 @@ If exception at commit: update Cause and EPC registers, kill all stages, inject 
 - Unambiguous proof of guilt: `Cause[BD]`
 - Exceptions appear in instruction sequence: detect exceptions at MEM stage.
 - Subsequent instructions nullified
+
+## Q&A
+
+- `jr`'s victim should be aligned by hardware(EPC aligned on word bundary).
+- Exception(Interrupt) in the branch delay slot of `jal`, `jalr`  should **double write**.
+- `sw` overrides state transition in Timer.
+- `IRQ`-> 1 when `count` -> 0.
+- LOAD -> CNT: `count` <= `preset`. 
+- mode1, INT -> IDLE -> LOAD.
+- `RI` exception only detects opcode and func.
+- `Preset` > 0.
+- victim: mult, divu, etc; roll back `HI` and `LO`.
+- No exceptions in Handler program (software only **read** EXL).
+- 2 versions of submission provided on class.
