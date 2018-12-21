@@ -1,9 +1,9 @@
-### step 1 (optional): delete extra ports and variables 
+### step 1: delete extra ports and variables 
 
 ### step 2: make you code synthesizable
 
 - [ ] delete hi-lo unit.
-- [ ] sequential logic ~ `<=`, `always @(*)`, combinatorial logic ~ `=`, `always @([clk])`.
+- [ ] sequential logic ~ `<=` or `always @([clk])`, combinatorial logic ~ `=` or `always @(*)`.
 - [ ] delete initial, fork, join, casex, casez and system tasks(`$display`, `$signed`?).
 - [ ] make sure all registers are resettable. 
 - [ ] no assignment conflicts

@@ -1,4 +1,4 @@
-32-bit MIPS 5-stage pipelining microsystem
+## 32-bit MIPS 5-stage pipelining microsystem
 - support MIPS-C5 = {`LB`, `LBU`, `LH`, `LHU`, `LW`, `SB`, `SH`, `SW`, `ADD`, `ADDU`, `SUB`, `SUBU`, `SLL`, `SRL`, `SRA`, `SLLV`, `SRLV`, `SRAV`, `AND`, `OR`, `XOR`, `NOR`, `ADDI`, `ADDIU`, `ANDI`, `ORI`, `XORI`, `LUI`, `SLT`, `SLTI`, `SLTIU`, `SLTU`, `BEQ`, `BNE`, `BLEZ`, `BGTZ`, `BLTZ`, `BGEZ`, `J`, `JAL`, `JALR`, `JR`, `ERET`, `MFC0`, `MTC0`}. **(No hi-lo relevant instructions)**
 - IM: 8KB IP core
 - DM: 8KB IP core
