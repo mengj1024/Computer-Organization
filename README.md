@@ -5,10 +5,6 @@ This repo include most of the on-class and off-class test problems recorded.
 
 On-class test on every Thursday, 1 pre-exam and 9 Projects in total.
 
-If you want to contribute to this repo, please follow the rules below:
-- **You should not just provide source code**.
-- Better if more comment about what you thought when you were dealing with that problem.
-
 Here's a outline of each project.
 ## Project 0
 - ALU
@@ -50,4 +46,4 @@ Here's a outline of each project.
 - 32-bit MIPS micro system based on Project 7 in Verilog.
 - Exception, Interrupt, Memory Mapped I/O.
 - test on FPGA board
-- support MIPS-C4 = {`LB`, `LBU`, `LH`, `LHU`, `LW`, `SB`, `SH`, `SW`, `ADD`, `ADDU`, `SUB`, `SUBU`, `MULT`, `MULTU`, `DIV`, `DIVU`, `SLL`, `SRL`, `SRA`, `SLLV`, `SRLV`, `SRAV`, `AND`, `OR`, `XOR`, `NOR`, `ADDI`, `ADDIU`, `ANDI`, `ORI`, `XORI`, `LUI`, `SLT`, `SLTI`, `SLTIU`, `SLTU`, `BEQ`, `BNE`, `BLEZ`, `BGTZ`, `BLTZ`, `BGEZ`, `J`, `JAL`, `JALR`, `JR`, `MFHI`, `MFLO`, `MTHI`, `MTLO`, `ERET`, `MFC0`, `MTC0`}.
+- support MIPS-C5 = {`LB`, `LBU`, `LH`, `LHU`, `LW`, `SB`, `SH`, `SW`, `ADD`, `ADDU`, `SUB`, `SUBU`, `SLL`, `SRL`, `SRA`, `SLLV`, `SRLV`, `SRAV`, `AND`, `OR`, `XOR`, `NOR`, `ADDI`, `ADDIU`, `ANDI`, `ORI`, `XORI`, `LUI`, `SLT`, `SLTI`, `SLTIU`, `SLTU`, `BEQ`, `BNE`, `BLEZ`, `BGTZ`, `BLTZ`, `BGEZ`, `J`, `JAL`, `JALR`, `JR`, `ERET`, `MFC0`, `MTC0`}. **(No hi-lo relevant instructions)**
