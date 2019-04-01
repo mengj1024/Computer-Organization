@@ -3,9 +3,10 @@ From logic gates to MIPS micro system.
 ## Problems
 This repo include most of the on-class and off-class test problems recorded.
 
-On-class test on every Thursday, 1 pre-exam and 9 Projects in total.
+1 pre-exam and 9 Projects in total.
 
-Here's a outline of each project.
+Here's an outline of each project.
+
 ## Project 0
 - ALU
 - CRC check digit
